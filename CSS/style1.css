@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    min-height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../images/blurred\ background.jpg);
+    background-attachment: fixed;
+    min-height: 600px;
+    background-size: cover;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.header{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+.footer{
+    color: white;
+    text-align: center;
+}
+.minute, .hour, .second{
+    font-size: 80px;
+}
+.hour{
+    width: 33.333333333%;
+    float: left;
+    text-align: right;
+}
+.hour::after{
+    content: "Hours";
+    color: red;
+    font-size: 12px;
+}
+.minute{
+    width: 33.333333333%;
+    float: left;
+    text-align: center;
+}
+.minute::after{
+    content: "Minutes";
+    color: red;
+    font-size: 12px;
+}
+.second{
+    width: 33.333333333%;
+    float: left;
+    text-align: left;
+}
+.second::after{
+    content: "Seconds";
+    color: red;
+    font-size: 12px;
+}
+.clock-frame{
+    margin: 100px 50px 300px 50px;
+    height: 100px;
+}
+.clock-frame p{
+    text-align: center;
+}
+@media only screen and (max-width: 480px){
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-image: url(images/blurred\ background.jpg) center center;
+        background-attachment: fixed;
+        min-height: 600px;
+        min-width: 100px;
+        background-size: cover;
+        overflow: hidden;
+        
+    }
+    .minute, .hour, .second{
+        font-size: 60px;
+        position: relative;
+        
+    }
+    .clock-frame{
+        margin: 100px 50px 200px 50px;
+        height: 100px;
+    }
+    .hour::after{
+        content: "Hours";
+        color: red;
+        font-size: 12px;
+        position: relative;
+        bottom: 50px;
+        right: 62px;
+    }
+    .minute::after{
+        content: "Minutes";
+        color: red;
+        font-size: 12px;
+        position: relative;
+        bottom: 50px;
+        right: 62px;
+    }
+    .second::after{
+        content: "Seconds";
+        color: red;
+        font-size: 12px;
+        position: relative;
+        bottom: 50px;
+        right: 62px;
+    }
+    .header{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .footer{
+        color: white;
+        text-align: center;
+        font-size: 12px;
+    }
+}
